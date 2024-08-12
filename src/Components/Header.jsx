@@ -5,8 +5,8 @@ import './Header.css';
 export default function Header() {
     return (
         <div className='hero'>
-            <div className='hero-content'>
-                <h1 className='hero-title'>
+            <div className='hero-content text-light'>
+                <h1 className='hero-title '>
                     Pizzería Mamma Mia!
                 </h1>
                 <h2 className='hero-subtitle'>

@@ -10,10 +10,6 @@ export default function CustomNavbar() {
   const total = 25000;
   const token = false;
 
-  // const formatearMontoEnCLP = (monto) => {
-  //   return monto.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
-  // };
-
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
