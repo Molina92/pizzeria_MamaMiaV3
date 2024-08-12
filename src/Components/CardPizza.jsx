@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 
 export default function CardPizza({ nombre, precio, ingredientes, imagen }) {
     return (
-        <Container className='container-fluid m-3'>
+        <Container className='m-3'>
             <Card style={{ width: '25rem' }} className='border border-3 p-2'>
                 <Card.Img variant="top" src={imagen} />
                 <Card.Body>
@@ -20,13 +20,13 @@ export default function CardPizza({ nombre, precio, ingredientes, imagen }) {
                     <div className='mt-3'>
                         <Card.Text className='fs-3 fw-semibold'>Precio: {FormatearMonto(precio)}</Card.Text>
                         <div className='d-flex justify-content-around'>
-                        <Button variant="light" className='border border-3'>Ver Más 👀</Button>
-                        <Button variant="dark" className='border border-3'>Añadir 🛒</Button>
+                            <Button variant="light" className='border border-3'>Ver Más 👀</Button>
+                            <Button variant="dark" className='border border-3'>Añadir 🛒</Button>
                         </div>
                     </div>
                 </Card.Body>
             </Card>
         </Container>
+
     )
 }
-
