@@ -1,33 +1,27 @@
 import { useState } from 'react'
 
-export const Register = () => {
+export const Login = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
     const [error, setError] = useState(false)
 
     const validarDatos = (e) => {
         e.preventDefault()
 
-        if (!email.trim() || !password.trim() || !confirmPassword.trim()) {
+        if (!email.trim() || !password.trim()) {
             setError(true)
             return
         }
 
-        if (password.length >= 6 && password === confirmPassword) {
+        if (password.length >= 6) {
             alert('Información enviada exitosamente');
             setError(false);
 
             setEmail('');
             setPassword('');
-            setConfirmPassword('');
         } else {
-            if (password.length < 6) {
-                alert('La contraseña debe tener al menos 6 caracteres.');
-            } else {
-                alert('Las contraseñas no coinciden.');
-            }
+            alert('La contraseña debe tener al menos 6 caracteres.');
         }
     }
 
@@ -58,17 +52,6 @@ export const Register = () => {
                                     className="form-control"
                                     onChange={(e) => setPassword(e.target.value)}
                                     value={password}
-                                />
-                            </div>
-
-                            <div className="form-group m-4">
-                                <label className="text-light">Confirm password:</label>
-                                <input
-                                    type="password"
-                                    name="confirmPassword"
-                                    className="form-control"
-                                    onChange={(e) => setConfirmPassword(e.target.value)}
-                                    value={confirmPassword}
                                 />
                             </div>
 
