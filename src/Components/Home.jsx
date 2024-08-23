@@ -9,8 +9,8 @@ export default function Home() {
             <Header />
             <div className='d-flex flex-wrap justify-content-center gap-2 mt-3'>
                 {pizzas.map((pizza) => (
-                    <div className="row mt-3">
-                        <CardPizza key={pizza.id} nombre={pizza.name} precio={pizza.price} ingredientes={pizza.ingredients} imagen={pizza.img} />
+                    <div className="row mt-3" key={pizza.id}>
+                        <CardPizza nombre={pizza.name} precio={pizza.price} ingredientes={pizza.ingredients} imagen={pizza.img} />
                     </div>
                 ))}
             </div>
