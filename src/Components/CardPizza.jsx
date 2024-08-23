@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import FormatearMonto from './FormatearMonto';
 import { Container } from 'react-bootstrap';
-import Cart from './Cart';
 
 export default function CardPizza({ nombre, precio, ingredientes, imagen }) {
     return (
@@ -22,7 +21,7 @@ export default function CardPizza({ nombre, precio, ingredientes, imagen }) {
                         <Card.Text className='fs-3 fw-semibold'>Precio: {FormatearMonto(precio)}</Card.Text>
                         <div className='d-flex justify-content-around'>
                             <Button variant="light" className='border border-3'>Ver Más 👀</Button>
-                            <Button variant="dark" className='border border-3' onClick={() => Cart.addToCart}>Añadir 🛒</Button>
+                            <Button variant="dark" className='border border-3'>Añadir 🛒</Button>
                         </div>
                     </div>
                 </Card.Body>
